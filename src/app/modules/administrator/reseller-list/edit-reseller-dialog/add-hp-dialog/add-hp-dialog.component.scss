@@ -1,0 +1,41 @@
+.width-100 {
+    width: 100%;
+}
+
+.width-70 {
+    width: 70%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.width-40 {
+    width: 40%;
+}
+
+.width-30 {
+    width: 30%;
+}
+
+.margin-r5 {
+    margin-right: 5px;
+}
+
+mat-form-field {
+    font-size: 10px;
+}
+
+.footer-btn {
+    display: flex;
+    align-items: flex-end;
+}
+
+.footer-btn div {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.footer-btn div button {
+    margin-left: 5px;
+}

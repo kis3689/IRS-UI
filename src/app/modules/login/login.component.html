@@ -1,0 +1,40 @@
+<article class="main-article">
+    <section class="content-box">
+        <section class="title-section">
+            <h1>IRS System</h1>
+        </section>
+        <section class="content-section">
+            <form>
+                <div class="content-center">
+                    <h2>Log in</h2>
+                </div>
+                <div>
+                    <mat-form-field class="full-width">
+                        <mat-label>ID</mat-label>
+                        <input matInput placeholder="ex. admin" [formControl]="loginId" [(ngModel)]="userid" name="userid">
+                        <mat-error *ngIf="loginId.invalid">{{getErrorMessage_required(loginId)}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>    
+                    <mat-form-field class="full-width">
+                        <mat-label>Password</mat-label>
+                        <input matInput [formControl]="loginPass" [type]="hide ? 'password' : 'text'" #pass [(ngModel)]="userpass" name="userpass">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="loginPass.invalid">{{getErrorMessage_required(loginPass)}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-checkbox>Remember me</mat-checkbox>
+                </div>
+                <div class="content-center">
+                    <button class="full-width" mat-flat-button color="primary" (click)="simpleLogin()">
+                        Log In
+                    </button>
+                </div>
+            </form>
+        </section>
+    </section>
+</article>

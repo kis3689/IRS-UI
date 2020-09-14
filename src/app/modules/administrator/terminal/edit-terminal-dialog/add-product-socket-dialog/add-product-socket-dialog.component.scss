@@ -1,0 +1,47 @@
+section {
+    padding-top: 10px;
+}
+
+section:first-child {
+    padding: 0;
+}
+
+.btn-section > div {
+    display: flex;
+}
+
+.btn-section > div div:last-child {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.btn-section > div div:first-child button {
+    margin-right: 5px;
+}
+
+.btn-section > div div:last-child button {
+    margin-left: 5px;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+
+.table-section > div:first-child {
+    padding: 10px;
+}
+
+.table-section > div:last-child {
+    max-height: 400px;
+    overflow: auto;
+}
+
+.bg-green {
+    background-color: #c2d49b;
+    color: white
+}

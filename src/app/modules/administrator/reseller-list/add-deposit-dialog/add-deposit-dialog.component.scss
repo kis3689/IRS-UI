@@ -1,0 +1,122 @@
+.width-100 {
+    width: 100%;
+}
+
+.width-70 {
+    width: 70%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.width-40 {
+    width: 40%;
+}
+
+.width-30 {
+    width: 30%;
+}
+
+.margin-r5 {
+    margin-right: 5px;
+}
+
+mat-form-field {
+    font-size: 10px;
+}
+
+mat-checkbox {
+    margin-right: 10px;
+}
+
+table {
+    width: 100%;
+}
+
+.bg-green {
+    background-color: #c2d49b;
+    color: white
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+.footer-btn {
+    display: flex;
+    align-items: flex-end;
+}
+
+.footer-btn div {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.footer-btn div button {
+    margin-left: 5px;
+}
+
+.input-black {
+    background-color: black;
+    font-size: 15px !important;
+}
+
+.input-black .mat-form-field-empty .mat-form-field-label {
+    color: #c2d49b !important;
+    font-weight: bold;
+}
+
+.input-black input.mat-input-element {
+    color: #c2d49b !important;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 5px;
+    font-size: 15px !important;
+}
+
+.input-black .mat-focused {
+    background-color: none !important;
+    color: none !important;
+}
+
+.input-black .mat-form-field-underline, .input-black .mat-form-field-ripple {
+    background-color: none !important;
+    color: none !important;
+}
+
+.scroll {
+    max-height: 400px;
+    overflow: auto;
+}
+
+.add-btn > mat-icon {
+    font-size: 50px;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+}
+
+.flex div:first-child {
+    text-align: right;
+    width: 25%;
+    padding-right: 5px;
+}
+
+.flex div:last-child {
+    padding: 5px;
+    border: 1px solid #cccccc;
+    width: 75%;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.table-field {
+    padding: 5px;
+    border: 1px solid #cccccc;
+    width: 95%;
+    max-height: 200px;
+    overflow-y: auto;
+}

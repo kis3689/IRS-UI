@@ -1,0 +1,146 @@
+<article class="mat-elevation-z8">
+    <section>
+        <h2>{{'sender.title'|translate}}</h2>
+    </section>
+    <section>
+        <div class="flex">
+            <div>
+                <mat-form-field class="width-40 margin-r5" appearance="fill">
+                    <mat-label>{{'sender.datepicker1'|translate}}</mat-label>
+                    <input matInput [matDatepicker]="start_picker">
+                    <mat-datepicker-toggle matSuffix [for]="start_picker"></mat-datepicker-toggle>
+                    <mat-datepicker #start_picker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field class="width-40 margin-r5" appearance="fill">
+                    <mat-label>{{'sender.datepicker2'|translate}}</mat-label>
+                    <input matInput [matDatepicker]="end_picker">
+                    <mat-datepicker-toggle matSuffix [for]="end_picker"></mat-datepicker-toggle>
+                    <mat-datepicker #end_picker></mat-datepicker>
+                </mat-form-field>
+                <br>
+                <mat-form-field class="width-100" appearance="fill">
+                    <mat-label>{{'sender.select1'|translate}}</mat-label>
+                    <mat-select>
+                        <mat-option value="all">=Semua Status=</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="width-100" appearance="fill">
+                    <mat-label>{{'sender.input1'|translate}}</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <br>
+                <mat-form-field class="width-100" appearance="fill">
+                    <mat-label>{{'sender.input2'|translate}}</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>{{'sender.input3'|translate}}</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <br>
+                <button class="margin-r5" mat-stroked-button>{{'sender.btn1'|translate}}</button>
+                <button class="margin-r5" mat-stroked-button>{{'sender.btn2'|translate}}</button>
+                <mat-checkbox  class="margin-r5">{{'sender.checkbox1'|translate}}</mat-checkbox>
+                <mat-form-field class="width-30" appearance="fill">
+                    <mat-label></mat-label>
+                    <mat-select>
+                        <mat-option value="all">Production</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div>
+            <div class="bg-green padding-10">{{'sender.table-comment'|translate}}</div>
+            <table mat-table [dataSource]="dataSource" *ngIf="dataSource.data.length <= 0">
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef> V </th>
+                    <td mat-cell *matCellDef="let element"> <mat-checkbox></mat-checkbox> </td>
+                </ng-container>
+                <ng-container matColumnDef="idTransaksi">
+                    <th mat-header-cell *matHeaderCellDef> {{'sender.table-column1'|translate}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element.idTransaksi}} </td>
+                </ng-container>
+                <ng-container matColumnDef="waktu">
+                    <th mat-header-cell *matHeaderCellDef> {{'sender.table-column2'|translate}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element.waktu}} </td>
+                </ng-container>
+                <ng-container matColumnDef="idReseller">
+                    <th mat-header-cell *matHeaderCellDef> {{'sender.table-column3'|translate}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element.idReseller}} </td>
+                </ng-container>
+                <ng-container matColumnDef="namaReseller">
+                    <th mat-header-cell *matHeaderCellDef> {{'sender.table-column4'|translate}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element.namaReseller}} </td>
+                </ng-container>
+                <ng-container matColumnDef="tujuan">
+                    <th mat-header-cell *matHeaderCellDef> {{'sender.table-column5'|translate}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element.tujuan}} </td>
+                </ng-container>
+                <ng-container matColumnDef="namaTerminal">
+                    <th mat-header-cell *matHeaderCellDef> {{'sender.table-column6'|translate}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element.namaTerminal}} </td>
+                </ng-container>
+                <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef> {{'sender.table-column7'|translate}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                </ng-container>
+                <ng-container matColumnDef="isi">
+                    <th mat-header-cell *matHeaderCellDef> {{'sender.table-column8'|translate}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element.isi}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <div class="no-data-msg" *ngIf="dataSource.data.length <= 0"> &lt; {{'sender.table-no-data'|translate}} &gt; </div>
+            <table mat-table [dataSource]="dataSource" *ngIf="dataSource.data.length > 0">
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef> V </th>
+                    <td mat-cell *matCellDef="let element"> <mat-checkbox></mat-checkbox> </td>
+                </ng-container>
+                <ng-container matColumnDef="idTransaksi">
+                    <th mat-header-cell *matHeaderCellDef> {{'sender.table-column1'|translate}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element.idTransaksi}} </td>
+                </ng-container>
+                <ng-container matColumnDef="waktu">
+                    <th mat-header-cell *matHeaderCellDef> {{'sender.table-column2'|translate}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element.waktu}} </td>
+                </ng-container>
+                <ng-container matColumnDef="idReseller">
+                    <th mat-header-cell *matHeaderCellDef> {{'sender.table-column3'|translate}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element.idReseller}} </td>
+                </ng-container>
+                <ng-container matColumnDef="namaReseller">
+                    <th mat-header-cell *matHeaderCellDef> {{'sender.table-column4'|translate}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element.namaReseller}} </td>
+                </ng-container>
+                <ng-container matColumnDef="tujuan">
+                    <th mat-header-cell *matHeaderCellDef> {{'sender.table-column5'|translate}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element.tujuan}} </td>
+                </ng-container>
+                <ng-container matColumnDef="namaTerminal">
+                    <th mat-header-cell *matHeaderCellDef> {{'sender.table-column6'|translate}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element.namaTerminal}} </td>
+                </ng-container>
+                <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef> {{'sender.table-column7'|translate}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                </ng-container>
+                <ng-container matColumnDef="isi">
+                    <th mat-header-cell *matHeaderCellDef> {{'sender.table-column8'|translate}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element.isi}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+        <div class="total-data">
+            <div>{{'sender.table-total1'|translate}}. 100</div>
+        </div>
+    </section>
+</article>

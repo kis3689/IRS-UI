@@ -1,0 +1,124 @@
+.width-100 {
+    width: 100%;
+}
+
+.width-70 {
+    width: 70%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.width-40 {
+    width: 40%;
+}
+
+.width-30 {
+    width: 30%;
+}
+
+.margin-r5 {
+    margin-right: 5px;
+}
+
+.total-data {
+    display: flex;
+    padding: 10px;
+    background-color: #d8d8d8;
+}
+
+.total-data div {
+    margin-right: 20px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid #cccccc;
+}
+
+.bg-green {
+    background-color: #c2d49b;
+    color: white
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+.no-data-msg {
+    text-align: center;
+    padding: 10px;
+}
+
+article {
+    padding: 20px;
+    background-color: white;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+}
+
+article > section {
+    min-width: 750px;
+}
+
+mat-form-field {
+    font-size: 11px;
+}
+
+.flex {
+    display: flex;
+    overflow: auto;
+    max-width: 100%;
+}
+
+.flex div {
+    padding-right: 5px;
+    flex-basis: 220px;
+}
+
+.flex div:nth-child(3) {
+    flex-basis: 240px;
+}
+
+.flex div:nth-child(4) {
+    flex-basis: 240px;
+}
+
+.sub-table {
+    border-collapse: collapse;
+}
+
+.sub-table th {
+    text-align: left;
+}
+
+.sub-table td {
+    min-width: 40px;
+    text-align: right;
+}
+
+.bg-red {
+    background-color: #ff0102;
+    color: white;
+}
+
+.bg-purple {
+    background-color: #b2a0c7;
+    color: white;
+}
+
+.bg-blue {
+    background-color: #538dd4;
+    color: white;
+}
+
+.bg-gray {
+    background-color: #f2f2f2;
+}
+
+.table-footer {
+    padding: 5px;
+    display: flex;
+}

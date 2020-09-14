@@ -1,0 +1,44 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="toggleSideBar()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span> NEONESIA</span>
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+            <ul fxLayout="row" fxLayoutGap="20px">
+                <li>
+                    <button mat-icon-button [matMenuTriggerFor]="systemSetting">
+                        <mat-icon>settings</mat-icon>
+                    </button>
+                    <mat-menu #systemSetting="matMenu">
+                        <!-- <button mat-menu-item (click)="switchLanguage('ko')">
+                            {{'header.lang-ko'|translate}}
+                        </button> -->
+                        <button mat-menu-item (click)="switchLanguage('en')">
+                            {{'header.lang-en'|translate}}
+                        </button>
+                        <button mat-menu-item (click)="switchLanguage('id')">
+                            {{'header.lang-id'|translate}}
+                        </button>
+                    </mat-menu>
+                </li>
+                <li>
+                    <button mat-button [matMenuTriggerFor]="accountSetting">
+                        <mat-icon>person_outline</mat-icon>
+                        김인섭
+                    </button>
+                    <mat-menu #accountSetting="matMenu">
+                        <a mat-menu-item routerLinkActive="list-item-active" routerLink="/account">
+                            <mat-icon>account_box</mat-icon>
+                            Manage Account
+                        </a>
+                        <button mat-menu-item routerLinkActive="list-item-active" routerLink="/login">
+                            <mat-icon>exit_to_app</mat-icon>
+                            Sign out
+                        </button>
+                    </mat-menu>
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

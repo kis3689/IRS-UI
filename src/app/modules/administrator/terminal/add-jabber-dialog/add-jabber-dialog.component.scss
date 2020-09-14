@@ -1,0 +1,55 @@
+mat-form-field {
+    font-size: 10px;
+    width: 80%;
+}
+
+.add-btn > mat-icon {
+    font-size: 30px;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-footer div {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.form-footer > div > button {
+    margin-left: 5px;
+}
+
+.data-field {
+    margin: 5px 0;
+    border: 1px solid rgba(0,0,0,.12);
+}
+
+.data-field > div {
+    padding: 5px;
+}
+
+.bg-green {
+    background-color: #c2d49b;
+    color: white
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    padding: 5px !important;
+}
+
+.no-data-msg {
+    text-align: center;
+    padding: 10px;
+}
+
+.form-section {
+    padding-top: 10px;
+}
+

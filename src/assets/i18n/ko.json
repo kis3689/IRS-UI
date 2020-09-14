@@ -1,0 +1,42 @@
+{
+    "header": {
+        "lang-ko": "한국어",
+        "lang-en": "영어",
+        "lang-id": "인도네시아어"
+    },
+    "sidebar": {
+        "administrator": "관리자",
+        "terminal": "단말기",
+        "prefix-operator": "통신사 관리번호",
+        "product": "상품",
+        "reseller-list": "판매자목록",
+        "transaction": "거래",
+        "sales": "판매리스트",
+        "sender": "Sender (OutBox)"
+    },
+    "menu-terminal": {
+        "header": "TERMINAL",
+        "btn-1": "Add Terminal  ▼",
+        "btn-1-1": "Terminal Center & Sender",
+        "btn-1-2": "Terminal Operator",
+        "btn-1-2-1": "Operator GSM",
+        "btn-1-2-2": "Operator Jabber",
+        "btn-1-2-3": "H2H",
+        "btn-1-2-4": "Pulsa Transfer",
+        "btn-2": "Refresh",
+        "btn-3": "Export",
+        "btn-4": "User Jabber",
+        "btn-5": "Profile Stock",
+        "btn-6": "Supplier",
+        "btn-7": "Auto SN",
+        "table-comment": "Drag a column header here to group by the column.",
+        "table-column1": "Terminal Name",
+        "table-column2": "Terminal",
+        "table-column3": "Dual",
+        "table-column4": "Supplier",
+        "table-column5": "Com",
+        "table-column6": "BaudRate",
+        "table-column7": "Modem",
+        "table-column8": "Status"
+    }
+}

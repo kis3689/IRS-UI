@@ -1,0 +1,39 @@
+.full-width {
+    width: 100%;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.content-center {
+    text-align: center;
+    justify-content: center;
+}
+
+.main-article {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.main-article .content-box {
+    margin: auto;
+    min-width: 350px;
+}
+
+.title-section {
+    text-align: center;
+}
+
+.content-section {
+    border: 1px solid #cccccc;
+    padding: 30px;
+}
+
+.content-section div {
+    margin: 10px 0;
+}
+
+
+

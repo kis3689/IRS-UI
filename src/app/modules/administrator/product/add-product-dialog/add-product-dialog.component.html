@@ -1,0 +1,185 @@
+<article>
+    <section>
+        <h2 mat-dialog-title>{{'product.add-product-dialog.title'|translate}}</h2>
+    </section>
+    <mat-divider></mat-divider>
+    <section>
+        <mat-tab-group>
+            <mat-tab label="{{'product.add-product-dialog.tab1.title'|translate}}">
+                <div class="flex">
+                    <div>
+                        <mat-form-field class="width-70" appearance="fill">
+                            <mat-label>{{'product.add-product-dialog.tab1.select1'|translate}}</mat-label>
+                            <mat-select>
+                                <mat-option>Deposit</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <button mat-icon-button color="primary" class="add-btn" (click)="openAddOperatorDialog()">
+                            <mat-icon>add_box</mat-icon>
+                        </button>
+                        <br>
+                        <mat-form-field class="width-100" appearance="fill">
+                            <mat-label>{{'product.add-product-dialog.tab1.input1'|translate}}</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="width-100" appearance="fill">
+                            <mat-label>{{'product.add-product-dialog.tab1.textarea1'|translate}}</mat-label>
+                            <textarea matInput></textarea>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="width-30 margin-r5" appearance="fill">
+                            <mat-label>{{'product.add-product-dialog.tab1.input2'|translate}}</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                        <mat-form-field class="width-30 margin-r5" appearance="fill">
+                            <mat-label>{{'product.add-product-dialog.tab1.input3'|translate}}</mat-label>
+                            <input matInput placeholder="Gram">
+                        </mat-form-field>
+                        <mat-checkbox class="font-size-10">{{'product.add-product-dialog.tab1.checkbox1'|translate}}</mat-checkbox>
+                        <br>
+                        <mat-form-field class="width-30 margin-r5" appearance="fill">
+                            <mat-label>{{'product.add-product-dialog.tab1.input4'|translate}}</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                        <mat-form-field class="width-30" appearance="fill">
+                            <mat-label>{{'product.add-product-dialog.tab1.input5'|translate}}</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="width-30 margin-r5" appearance="fill">
+                            <mat-label>{{'product.add-product-dialog.tab1.select2'|translate}}</mat-label>
+                            <mat-select>
+                                <mat-option>1. ELEKTRIK</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field class="width-30" appearance="fill">
+                            <mat-label>{{'product.add-product-dialog.tab1.input6'|translate}}</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="width-30 margin-r5" appearance="fill">
+                            <mat-label>{{'product.add-product-dialog.tab1.input7'|translate}}</mat-label>
+                            <input type="time" step="1" matInput>
+                        </mat-form-field>
+                        <mat-form-field class="width-30" appearance="fill">
+                            <mat-label>{{'product.add-product-dialog.tab1.input8'|translate}}</mat-label>
+                            <input type="time" step="1" matInput>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="width-100" appearance="fill">
+                            <mat-label>{{'product.add-product-dialog.tab1.textarea2'|translate}}</mat-label>
+                            <textarea matInput></textarea>
+                        </mat-form-field>
+                        <br>
+                        <mat-checkbox class="font-size-10 margin-r5">{{'product.add-product-dialog.tab1.checkbox2'|translate}}</mat-checkbox>
+                        <mat-checkbox class="font-size-10 margin-r5">{{'product.add-product-dialog.tab1.checkbox3'|translate}}</mat-checkbox>
+                        <mat-checkbox class="font-size-10 margin-r5 font-red">{{'product.add-product-dialog.tab1.checkbox4'|translate}}</mat-checkbox>
+                        <br>
+                        <mat-form-field class="width-100" appearance="fill">
+                            <mat-label>{{'product.add-product-dialog.tab1.input9'|translate}}</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <table mat-table [dataSource]="dataSource">
+                            <ng-container matColumnDef="pricePlan">
+                                <th mat-header-cell *matHeaderCellDef> {{'product.add-product-dialog.tab1.table-column1'|translate}} </th>
+                                <td mat-cell *matCellDef="let element"> {{element.pricePlan}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="hargaJual">
+                                <th mat-header-cell *matHeaderCellDef> {{'product.add-product-dialog.tab1.table-column2'|translate}} </th>
+                                <td mat-cell *matCellDef="let element"> {{element.hargaJual}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="komisiFee">
+                                <th mat-header-cell *matHeaderCellDef> {{'product.add-product-dialog.tab1.table-column3'|translate}} </th>
+                                <td mat-cell *matCellDef="let element"> {{element.komisiFee}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="status">
+                                <th mat-header-cell *matHeaderCellDef> {{'product.add-product-dialog.tab1.table-column4'|translate}} </th>
+                                <td mat-cell *matCellDef="let element"> <mat-checkbox></mat-checkbox> </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="footer-btn">
+                    <div>
+                        <button mat-flat-button color="primary"><mat-icon>done</mat-icon>{{'product.add-product-dialog.tab1.footer-btn1'|translate}}</button>
+                        <button mat-flat-button color="warn"><mat-icon>clear</mat-icon>{{'product.add-product-dialog.tab1.footer-btn2'|translate}}</button>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="{{'product.add-product-dialog.tab2.title'|translate}}" *ngIf="data.id == ''">
+                <div>
+                    <div>
+                        <mat-form-field class="width-30 margin-r5" appearance="fill">
+                            <mat-label>{{'product.add-product-dialog.tab2.input1'|translate}}</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                        <mat-form-field class="width-40" appearance="fill">
+                            <mat-label></mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="width-30 margin-r5" appearance="fill">
+                            <mat-label>{{'product.add-product-dialog.tab2.input2'|translate}}</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                        <button mat-stroked-button class="margin-r5">{{'product.add-product-dialog.tab2.btn1'|translate}}</button>
+                        <button mat-stroked-button>{{'product.add-product-dialog.tab2.btn2'|translate}}</button>
+                    </div>
+                    <div>
+                        <div class="bg-green padding-10">{{'product.add-product-dialog.tab2.table-comment'|translate}}</div>
+                        <table mat-table [dataSource]="dataSource2" *ngIf="dataSource2.data.length <= 0">
+                            <ng-container matColumnDef="idReseller">
+                                <th mat-header-cell *matHeaderCellDef> {{'product.add-product-dialog.tab2.table-column1'|translate}} </th>
+                                <td mat-cell *matCellDef="let element"> {{element.idReseller}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="nameReseller">
+                                <th mat-header-cell *matHeaderCellDef> {{'product.add-product-dialog.tab2.table-column2'|translate}} </th>
+                                <td mat-cell *matCellDef="let element"> {{element.nameReseller}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="harga">
+                                <th mat-header-cell *matHeaderCellDef> {{'product.add-product-dialog.tab2.table-column3'|translate}} </th>
+                                <td mat-cell *matCellDef="let element"> {{element.harga}} </td>
+                            </ng-container>
+            
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+                        </table>
+                        <div class="no-data-msg" *ngIf="dataSource2.data.length <= 0"> &lt; {{'product.add-product-dialog.tab2.table-no-data'|translate}} &gt; </div>
+                        <table mat-table [dataSource]="dataSource2" *ngIf="dataSource2.data.length > 0">
+                            <ng-container matColumnDef="idReseller">
+                                <th mat-header-cell *matHeaderCellDef> {{'product.add-product-dialog.tab2.table-column1'|translate}} </th>
+                                <td mat-cell *matCellDef="let element"> {{element.idReseller}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="nameReseller">
+                                <th mat-header-cell *matHeaderCellDef> {{'product.add-product-dialog.tab2.table-column2'|translate}} </th>
+                                <td mat-cell *matCellDef="let element"> {{element.nameReseller}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="harga">
+                                <th mat-header-cell *matHeaderCellDef> {{'product.add-product-dialog.tab2.table-column3'|translate}} </th>
+                                <td mat-cell *matCellDef="let element"> {{element.harga}} </td>
+                            </ng-container>
+            
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+                        </table>
+                    </div>
+                    <div class="total-data">
+                        <div>100</div>
+                    </div>
+                </div>
+                <div class="footer-btn">
+                    <div>
+                        <button mat-flat-button color="primary"><mat-icon>done</mat-icon>{{'product.add-product-dialog.tab2.footer-btn1'|translate}}</button>
+                        <button mat-flat-button color="warn"><mat-icon>clear</mat-icon>{{'product.add-product-dialog.tab2.footer-btn2'|translate}}</button>
+                    </div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </section>
+</article>

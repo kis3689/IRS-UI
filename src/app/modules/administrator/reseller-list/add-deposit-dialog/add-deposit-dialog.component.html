@@ -1,0 +1,129 @@
+<article>
+    <section>
+        <h2 mat-dialog-title>{{'reseller-list.add-deposit-dialog.title'|translate}}</h2>
+    </section>
+    <mat-divider></mat-divider>
+    <section>
+        <div class="scroll">
+            <mat-form-field class="width-100 input-black">
+                <mat-label></mat-label>
+                <input matInput value="0">
+            </mat-form-field>
+            <br><br>
+            <mat-form-field class="width-30" appearance="fill">
+                <mat-label>{{'reseller-list.add-deposit-dialog.input1'|translate}}</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <button mat-icon-button color="primary" class="add-btn">
+                <mat-icon>add_box</mat-icon>
+            </button>
+            <mat-form-field class="width-30" appearance="fill">
+                <mat-label></mat-label>
+                <input matInput>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="width-100" appearance="fill">
+                <mat-label>{{'reseller-list.add-deposit-dialog.input2'|translate}}</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="width-70" appearance="fill">
+                <mat-label>{{'reseller-list.add-deposit-dialog.input3'|translate}}</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="width-100 input-black">
+                <mat-label>{{'reseller-list.add-deposit-dialog.input4'|translate}}</mat-label>
+                <input matInput value="0">
+            </mat-form-field>
+            <br><br>
+            <mat-form-field class="width-100" appearance="fill">
+                <mat-label>{{'reseller-list.add-deposit-dialog.input5'|translate}}</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <br>
+            <mat-checkbox>{{'reseller-list.add-deposit-dialog.checkbox1'|translate}}</mat-checkbox>
+            <mat-form-field class="width-40" appearance="fill">
+                <mat-label>{{'reseller-list.add-deposit-dialog.select1'|translate}}</mat-label>
+                <mat-select>
+                    <mat-option>=Pilih Akun</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br>
+            <div class="flex">
+                <div>
+                    <h5>{{'reseller-list.add-deposit-dialog.subtitle1'|translate}}</h5>
+                    <h5>{{'reseller-list.add-deposit-dialog.subtitle2'|translate}}</h5>
+                </div>
+                <div>
+                    <table mat-table [dataSource]="dataSource">
+                        <ng-container matColumnDef="v">
+                            <th mat-header-cell *matHeaderCellDef> V </th>
+                            <td mat-cell *matCellDef="let element"> <mat-checkbox></mat-checkbox> </td>
+                        </ng-container>
+                        <ng-container matColumnDef="id">
+                            <th mat-header-cell *matHeaderCellDef> {{'reseller-list.add-deposit-dialog.table-column1'|translate}} </th>
+                            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="jenis">
+                            <th mat-header-cell *matHeaderCellDef> {{'reseller-list.add-deposit-dialog.table-column2'|translate}} </th>
+                            <td mat-cell *matCellDef="let element"> {{element.jenis}} </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </div>
+            </div>
+            <br>
+            <mat-form-field class="width-30 margin-r5" appearance="fill">
+                <mat-label>{{'reseller-list.add-deposit-dialog.select2'|translate}}</mat-label>
+                <mat-select>
+                    <mat-option>Center Jabb.com</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-checkbox class="margin-r5">{{'reseller-list.add-deposit-dialog.checkbox2'|translate}}</mat-checkbox>
+            <mat-form-field class="width-30" appearance="fill">
+                <mat-label></mat-label>
+                <mat-select>
+                    <mat-option>Kertas 8x10.</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br>
+            <h5>{{'reseller-list.add-deposit-dialog.subtitle3'|translate}}</h5>
+            <div class="table-field">
+                <table mat-table [dataSource]="dataSource2">
+                    <ng-container matColumnDef="v">
+                        <th mat-header-cell *matHeaderCellDef> V </th>
+                        <td mat-cell *matCellDef="let element"> <mat-checkbox></mat-checkbox> </td>
+                    </ng-container>
+                    <ng-container matColumnDef="waktu">
+                        <th mat-header-cell *matHeaderCellDef> {{'reseller-list.add-deposit-dialog.table-column3'|translate}} </th>
+                        <td mat-cell *matCellDef="let element"> {{element.waktu}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="sebesar">
+                        <th mat-header-cell *matHeaderCellDef> {{'reseller-list.add-deposit-dialog.table-column4'|translate}} </th>
+                        <td mat-cell *matCellDef="let element"> {{element.sebesar}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="keterangan">
+                        <th mat-header-cell *matHeaderCellDef> {{'reseller-list.add-deposit-dialog.table-column5'|translate}} </th>
+                        <td mat-cell *matCellDef="let element"> {{element.keterangan}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="namauser">
+                        <th mat-header-cell *matHeaderCellDef> {{'reseller-list.add-deposit-dialog.table-column6'|translate}} </th>
+                        <td mat-cell *matCellDef="let element"> {{element.namauser}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+                </table>
+            </div>
+        </div>
+        <div class="footer-btn">
+            <div>
+                <button mat-flat-button color="primary"><mat-icon>done</mat-icon>{{'reseller-list.add-deposit-dialog.footer-btn1'|translate}}</button>
+                <button mat-flat-button color="warn"><mat-icon>clear</mat-icon>{{'reseller-list.add-deposit-dialog.footer-btn2'|translate}}</button>
+            </div>
+        </div>
+    </section>
+</article>
